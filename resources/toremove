@@ -1,0 +1,6 @@
+X
+Cut current line or selected block to clipboard
+C
+Copy current line or selected block to clipboard
+V
+Paste from clipboard

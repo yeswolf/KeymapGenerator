@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.jetbrains.keymap.exporter</id>
+    <name>True Keymap Exporter</name>
+    <version>1.0</version>
+    <vendor email="yeswolf@gmail.com" url="http://www.jetbrains.com">JetBrains</vendor>
+
+    <description><![CDATA[
+  Keymap exporter   Keymap exporter   Keymap exporter  Keymap exporter   Keymap exporter
+]]></description>
+
+    <change-notes><![CDATA[
+        Keymap exporter Keymap exporter Keymap exporter Keymap exporter
+        ]]>
+  </change-notes>
+
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+
+    <application-components>
+        <component>
+            <implementation-class>yeswolf.keymap.exporter.Exporter</implementation-class>
+        </component>
+    </application-components>
+
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
