@@ -11,6 +11,7 @@ import java.nio.file.Paths
 
 private fun convert(keymaps: JSONObject, toPrint: JSONObject, name: String, mac: Boolean): String {
   var result = ""
+  var y = 0
   try {
     result += "<html><body>"
 
@@ -19,28 +20,31 @@ private fun convert(keymaps: JSONObject, toPrint: JSONObject, name: String, mac:
     val sectionsJSON = toPrint.getJSONArray("sections")
     for (i in 0 until sectionsJSON.length()) {
       val sectionJSON = sectionsJSON.getJSONObject(i)
-      result += "<strong>" + sectionJSON.getString("name") + "</strong>"
-      result += "<table>"
+      result += "<div><table>"
+      result += "<thead><tr><th>"
+      result += sectionJSON.getString("name").toUpperCase()
+      result += "</th><th></th></tr></thead>"
+
       val actionIDS = sectionJSON.getJSONArray("actions")
       for (j in 0 until actionIDS.length()) {
         val actionConfigJSON = actionIDS.getJSONObject(j)
         val ids = actionConfigJSON.getString("id")
         val actions = ids.split("\\,".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
         result += "<tr>"
-        result += ("<td>")
+        var scat = ("<td>")
         var description = actionConfigJSON.getString("description")
         for (k in actions.indices) {
           val action = actions[k]
           val actionJSON = findActionJSON(action, actionsJSON)
           if (actionJSON == null) {
-            result += ("<span style='background-color:red;'>Can't find $action</span>")
+            scat += ("<span style='background-color:red;'>Can't find $action</span>")
             continue
           }
           if (description.isEmpty()) {
             if (actionJSON.has("description")) {
               description = actionJSON.getString("description")
             } else {
-              result += ("description missed for $action")
+              scat += ("description missed for $action")
               description = actionJSON.getString("name")
             }
           }
@@ -58,14 +62,18 @@ private fun convert(keymaps: JSONObject, toPrint: JSONObject, name: String, mac:
             var shortcut = ""
             if (shortcutsJSONArray.length() > 0) {
               shortcut = shortcutsJSONArray.getString(0)
-              if(mac){
+              if (mac) {
                 shortcut = shortcut.replace("\\[".toRegex(), "")
                     .replace("]".toRegex(), "")
+                    .replace("Double ".toRegex(), "Double")
                     .replace("ctrl".toRegex(), "⌃")
                     .replace("shift".toRegex(), "⇧")
                     .replace("meta".toRegex(), "⌘")
                     .replace("alt".toRegex(), "⌥")
-                    .replace("pressed".toRegex(), "")
+                    .replace("BACK_QUOTE".toRegex(), "`")
+                    .replace("BACK_SPACE".toRegex(), "⌦")
+                    .replace("BACK_SLASH".toRegex(), "&bsol;")
+                    .replace("pressed ".toRegex(), "")
                     .replace("SPACE".toRegex(), "Space")
                     .replace("ENTER".toRegex(), "⏎")
                     .replace("SLASH".toRegex(), "/")
@@ -74,27 +82,55 @@ private fun convert(keymaps: JSONObject, toPrint: JSONObject, name: String, mac:
                     .replace("UP".toRegex(), "↑")
                     .replace("DOWN".toRegex(), "↓")
                     .replace("DELETE".toRegex(), "⌫")
-                    .replace("BACK_Space".toRegex(), "⌦")
                     .replace("SUBTRACT".toRegex(), "-")
                     .replace("ADD".toRegex(), "+")
                     .replace("ESCAPE".toRegex(), "⎋")
-                    .replace("BACK_QUOTE".toRegex(), "`")
                     .replace("QUOTE".toRegex(), "'")
                     .replace("TAB".toRegex(), "⇥")
                     .replace("LEFT".toRegex(), "←")
                     .replace("RIGHT".toRegex(), "→")
                     .replace("\\s".toRegex(), "")
+              }else{
+                shortcut = shortcut.replace("\\[".toRegex(), "")
+                    .replace("]".toRegex(), "")
+                    .replace("Double ".toRegex(), "Double")
+                    .replace("ctrl".toRegex(), "Ctrl")
+                    .replace("shift".toRegex(), "Shift")
+                    .replace("meta".toRegex(), "⌘")
+                    .replace("alt".toRegex(), "Alt")
+                    .replace("BACK_QUOTE".toRegex(), "`")
+                    .replace("BACK_SPACE".toRegex(), "Backspace")
+                    .replace("BACK_SLASH".toRegex(), "&bsol;")
+                    .replace("pressed ".toRegex(), "")
+                    .replace("SPACE".toRegex(), "Space")
+                    .replace("ENTER".toRegex(), "Enter")
+                    .replace("SLASH".toRegex(), "/")
+                    .replace("OPEN_BRACKET".toRegex(), "[")
+                    .replace("CLOSE_BRACKET".toRegex(), "]")
+                    .replace("UP".toRegex(), "↑")
+                    .replace("DOWN".toRegex(), "↓")
+                    .replace("DELETE".toRegex(), "Delete")
+                    .replace("SUBTRACT".toRegex(), "Numpad-")
+                    .replace("ADD".toRegex(), "Numpad+")
+                    .replace("ESCAPE".toRegex(), "Esc")
+                    .replace("QUOTE".toRegex(), "'")
+                    .replace("TAB".toRegex(), "⇥")
+                    .replace("LEFT".toRegex(), "←")
+                    .replace("RIGHT".toRegex(), "→")
+                    .replace(" ".toRegex(), "+")
+                    .replace("Double".toRegex(), "Double ")
               }
             }
 
-            result += (shortcut + if (k != actions.size - 1) " / " else "")
+            scat += (shortcut + if (k != actions.size - 1) " / " else "")
           }
         }
-        result += ("</td>")
-        result += ("<td" + (if (description.isEmpty()) " style=\"background-color:red;\"" else "") + ">" + description + "</td>")
+        scat += ("</td>")
+        var descr = ("<td" + (if (description.isEmpty()) " style=\"background-color:red;\"" else "") + ">" + description + "</td>")
+        result += descr + scat
         result += ("</tr>")
       }
-      result += ("</table>")
+      result += ("</table></div>")
 
     }
 
@@ -119,23 +155,22 @@ private fun findActionJSON(id: String, actionsJSON: JSONArray): JSONObject? {
 
 
 fun main(args: Array<String>) {
-  if(args.count() < 3){
-    print("Usage: <allactions.json> <patch.json> <keymap name> <os (mac or empty for win/linux)>")
+  if (args.count() < 4) {
+    print("Usage: <allactions.json> <patch.json> <keymap name> <output file path> <os (mac or empty for win/linux)>")
   }
 
   try {
     val allactions = args[0]
     val patch = args[1]
     val keymapName = args[2]
-    val mac = args.count() == 4 && !(args[3].isEmpty())
+    val outputFile = args[3]
+    val mac = args.count() == 5 && !(args[4].isEmpty())
 
     val actions = JSONObject(String(Files.readAllBytes(Paths.get(allactions))))
     val toPrint = JSONObject(String(Files.readAllBytes(Paths.get(patch))))
-    val file = createTempFile()
-    val newFile = File(file.absolutePath.replace(".tmp", ".html"))
+    val file = File(outputFile)
     file.writeText(convert(actions, toPrint, keymapName, mac))
-    file.renameTo(newFile)
-    Runtime.getRuntime().exec("open ${newFile.absolutePath}")
+    Runtime.getRuntime().exec("open ${file.absolutePath}")
   } catch (e: FileNotFoundException) {
     e.printStackTrace()
   } catch (e: IOException) {
