@@ -48,82 +48,80 @@ private fun convert(keymaps: JSONObject, toPrint: JSONObject, name: String, mac:
               description = actionJSON.getString("name")
             }
           }
-          if (actionJSON != null) {
-            val targetKeymapsJSON = actionJSON.getJSONArray("keymaps")
-            var targetKeymap: JSONObject? = null
-            for (m in 0 until targetKeymapsJSON.length()) {
-              targetKeymap = targetKeymapsJSON.getJSONObject(m)
-              if (targetKeymap!!.getString("keymap").equals(name, ignoreCase = true)) {
-                break
-              }
+          val targetKeymapsJSON = actionJSON.getJSONArray("keymaps")
+          var targetKeymap: JSONObject? = null
+          for (m in 0 until targetKeymapsJSON.length()) {
+            targetKeymap = targetKeymapsJSON.getJSONObject(m)
+            if (targetKeymap!!.getString("keymap").equals(name, ignoreCase = true)) {
+              break
             }
-
-            val shortcutsJSONArray = targetKeymap!!.getJSONArray("shortcuts")
-            var shortcut = ""
-            if (shortcutsJSONArray.length() > 0) {
-              shortcut = shortcutsJSONArray.getString(0)
-              if (mac) {
-                shortcut = shortcut.replace("\\[".toRegex(), "")
-                    .replace("]".toRegex(), "")
-                    .replace("Double ".toRegex(), "Double")
-                    .replace("ctrl".toRegex(), "⌃")
-                    .replace("shift".toRegex(), "⇧")
-                    .replace("meta".toRegex(), "⌘")
-                    .replace("alt".toRegex(), "⌥")
-                    .replace("BACK_QUOTE".toRegex(), "`")
-                    .replace("BACK_SPACE".toRegex(), "⌦")
-                    .replace("BACK_SLASH".toRegex(), "&bsol;")
-                    .replace("pressed ".toRegex(), "")
-                    .replace("SPACE".toRegex(), "Space")
-                    .replace("ENTER".toRegex(), "⏎")
-                    .replace("SLASH".toRegex(), "/")
-                    .replace("OPEN_BRACKET".toRegex(), "[")
-                    .replace("CLOSE_BRACKET".toRegex(), "]")
-                    .replace("UP".toRegex(), "↑")
-                    .replace("DOWN".toRegex(), "↓")
-                    .replace("DELETE".toRegex(), "⌫")
-                    .replace("SUBTRACT".toRegex(), "-")
-                    .replace("ADD".toRegex(), "+")
-                    .replace("ESCAPE".toRegex(), "⎋")
-                    .replace("QUOTE".toRegex(), "'")
-                    .replace("TAB".toRegex(), "⇥")
-                    .replace("LEFT".toRegex(), "←")
-                    .replace("RIGHT".toRegex(), "→")
-                    .replace("\\s".toRegex(), "")
-              }else{
-                shortcut = shortcut.replace("\\[".toRegex(), "")
-                    .replace("]".toRegex(), "")
-                    .replace("Double ".toRegex(), "Double")
-                    .replace("ctrl".toRegex(), "Ctrl")
-                    .replace("shift".toRegex(), "Shift")
-                    .replace("meta".toRegex(), "⌘")
-                    .replace("alt".toRegex(), "Alt")
-                    .replace("BACK_QUOTE".toRegex(), "`")
-                    .replace("BACK_SPACE".toRegex(), "Backspace")
-                    .replace("BACK_SLASH".toRegex(), "&bsol;")
-                    .replace("pressed ".toRegex(), "")
-                    .replace("SPACE".toRegex(), "Space")
-                    .replace("ENTER".toRegex(), "Enter")
-                    .replace("SLASH".toRegex(), "/")
-                    .replace("OPEN_BRACKET".toRegex(), "[")
-                    .replace("CLOSE_BRACKET".toRegex(), "]")
-                    .replace("UP".toRegex(), "↑")
-                    .replace("DOWN".toRegex(), "↓")
-                    .replace("DELETE".toRegex(), "Delete")
-                    .replace("SUBTRACT".toRegex(), "Numpad-")
-                    .replace("ADD".toRegex(), "Numpad+")
-                    .replace("ESCAPE".toRegex(), "Esc")
-                    .replace("QUOTE".toRegex(), "'")
-                    .replace("TAB".toRegex(), "⇥")
-                    .replace("LEFT".toRegex(), "←")
-                    .replace("RIGHT".toRegex(), "→")
-                    .replace(" ".toRegex(), "+")
-                    .replace("Double".toRegex(), "Double ")
-              }
-            }
-
-            scat += (shortcut + if (k != actions.size - 1) " / " else "")
           }
+
+          val shortcutsJSONArray = targetKeymap!!.getJSONArray("shortcuts")
+          var shortcut = ""
+          if (shortcutsJSONArray.length() > 0) {
+            shortcut = shortcutsJSONArray.getString(0)
+            if (mac) {
+              shortcut = shortcut.replace("\\[".toRegex(), "")
+                  .replace("]".toRegex(), "")
+                  .replace("Double ".toRegex(), "Double")
+                  .replace("ctrl".toRegex(), "⌃")
+                  .replace("shift".toRegex(), "⇧")
+                  .replace("meta".toRegex(), "⌘")
+                  .replace("alt".toRegex(), "⌥")
+                  .replace("BACK_QUOTE".toRegex(), "`")
+                  .replace("BACK_SPACE".toRegex(), "⌦")
+                  .replace("BACK_SLASH".toRegex(), "&bsol;")
+                  .replace("pressed ".toRegex(), "")
+                  .replace("SPACE".toRegex(), "Space")
+                  .replace("ENTER".toRegex(), "⏎")
+                  .replace("SLASH".toRegex(), "/")
+                  .replace("OPEN_BRACKET".toRegex(), "[")
+                  .replace("CLOSE_BRACKET".toRegex(), "]")
+                  .replace("UP".toRegex(), "↑")
+                  .replace("DOWN".toRegex(), "↓")
+                  .replace("DELETE".toRegex(), "⌫")
+                  .replace("SUBTRACT".toRegex(), "-")
+                  .replace("ADD".toRegex(), "+")
+                  .replace("ESCAPE".toRegex(), "⎋")
+                  .replace("QUOTE".toRegex(), "'")
+                  .replace("TAB".toRegex(), "⇥")
+                  .replace("LEFT".toRegex(), "←")
+                  .replace("RIGHT".toRegex(), "→")
+                  .replace("\\s".toRegex(), "")
+            } else {
+              shortcut = shortcut.replace("\\[".toRegex(), "")
+                  .replace("]".toRegex(), "")
+                  .replace("Double ".toRegex(), "Double")
+                  .replace("ctrl".toRegex(), "Ctrl")
+                  .replace("shift".toRegex(), "Shift")
+                  .replace("meta".toRegex(), "⌘")
+                  .replace("alt".toRegex(), "Alt")
+                  .replace("BACK_QUOTE".toRegex(), "`")
+                  .replace("BACK_SPACE".toRegex(), "Backspace")
+                  .replace("BACK_SLASH".toRegex(), "&bsol;")
+                  .replace("pressed ".toRegex(), "")
+                  .replace("SPACE".toRegex(), "Space")
+                  .replace("ENTER".toRegex(), "Enter")
+                  .replace("SLASH".toRegex(), "/")
+                  .replace("OPEN_BRACKET".toRegex(), "[")
+                  .replace("CLOSE_BRACKET".toRegex(), "]")
+                  .replace("UP".toRegex(), "↑")
+                  .replace("DOWN".toRegex(), "↓")
+                  .replace("DELETE".toRegex(), "Delete")
+                  .replace("SUBTRACT".toRegex(), "Numpad-")
+                  .replace("ADD".toRegex(), "Numpad+")
+                  .replace("ESCAPE".toRegex(), "Esc")
+                  .replace("QUOTE".toRegex(), "'")
+                  .replace("TAB".toRegex(), "⇥")
+                  .replace("LEFT".toRegex(), "←")
+                  .replace("RIGHT".toRegex(), "→")
+                  .replace(" ".toRegex(), "+")
+                  .replace("Double".toRegex(), "Double ")
+            }
+          }
+
+          scat += (shortcut + if (k != actions.size - 1) " / " else "")
         }
         scat += ("</td>")
         var descr = ("<td" + (if (description.isEmpty()) " style=\"background-color:red;\"" else "") + ">" + description + "</td>")
