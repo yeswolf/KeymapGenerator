@@ -23,9 +23,6 @@ fun start(logoPath:String) = """<?xml version="1.0" encoding="utf-8"?>
 	.slash{fill:#77787B;}
 	.medium_plus{font-family:'Gotham-Medium+';}
 	.st7{fill:#FFFFFF;}
-	.st8{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
-	.st9{clip-path:url(#SVGID_4_);}
-	.svg1{clip-path:url(#SVGID_6_);}
 	.row_line1{letter-spacing:-1;}
 </style>
     <image x="28" y="36" height="22" xlink:href="$logoPath" />
