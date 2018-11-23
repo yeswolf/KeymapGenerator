@@ -1,0 +1,461 @@
+{
+  "sections": [
+    {
+      "name": "Editing",
+      "column": 1,
+      "actions": [
+        {
+          "id": "CodeCompletion",
+          "description": "Basic code completion"
+        },
+        {
+          "id": "SmartTypeCompletion",
+          "description": "Smart code completion"
+        },
+        {
+          "id": "EditorCompleteStatement",
+          "description": "Complete statement"
+        },
+        {
+          "id": "ParameterInfo",
+          "description": "Parameter info"
+        },
+        {
+          "id": "QuickJavaDoc",
+          "description": "Quick Documentation"
+        },
+        {
+          "id": "ExternalJavaDoc",
+          "description": "External Documentation"
+        },
+        {
+          "id": "BriefInfo",
+          "description": "Brief Info"
+        },
+        {
+          "id": "ShowErrorDescription",
+          "description": "Show description of error/warning at caret"
+        },
+        {
+          "id": "Generate",
+          "description": "Generate Code"
+        },
+        {
+          "id": "OverrideMethods,ImplementMethods",
+          "description": "Override / Implement methods"
+        },
+        {
+          "id": "SurroundWith",
+          "description": "Surround with..."
+        },
+        {
+          "id": "MoveStatementUp,MoveStatementDown",
+          "description": "Move statements up / down"
+        },
+        {
+          "id": "CommentByLineComment",
+          "description": "Comment with line comment"
+        },
+        {
+          "id": "CommentByBlockComment",
+          "description": "Comment with block comment"
+        },
+        {
+          "id": "EditorSelectWord,EditorUnSelectWord",
+          "description": "Expand / shrink selection"
+        },
+        {
+          "id": "EditorContextInfo",
+          "description": "Context info"
+        },
+        {
+          "id": "ShowIntentionActions",
+          "description": "Show intention actions and quick-fixes"
+        },
+        {
+          "id": "ReformatCode",
+          "description": "Reformat code"
+        },
+        {
+          "id": "OptimizeImports",
+          "description": "Optimize imports"
+        },
+        {
+          "id": "EditorIndentSelection,EditorUnindentSelection",
+          "description": "Indent / unindent selected lines"
+        },
+        {
+          "id": "PasteMultiple",
+          "description": "Paste from recent buffers"
+        },
+        {
+          "id": "EditorDuplicate",
+          "description": "Duplicate current line or selected block"
+        },
+        {
+          "id": "EditorDeleteLine",
+          "description": "Delete line at caret"
+        },
+        {
+          "id": "EditorJoinLines",
+          "description": "Smart line join"
+        },
+        {
+          "id": "EditorSplitLine,EditorStartNewLine",
+          "description": "Smart line split / Start new line"
+        },
+        {
+          "id": "EditorToggleCase",
+          "description": "Toggle case "
+        },
+        {
+          "id": "EditorCodeBlockEndWithSelection,EditorCodeBlockStartWithSelection",
+          "description": "Select till code block end / start"
+        },
+        {
+          "id": "EditorDeleteToWordEnd,EditorDeleteToWordStart",
+          "description": "Delete to word start / end"
+        },
+        {
+          "id": "ExpandAll,CollapseAll",
+          "description": "Expand / collapse code block"
+        },
+        {
+          "id": "ExpandRegionRecursively,CollapseRegionRecursively",
+
+          "description": "Expand / collapse code block recursively"
+        },
+        {
+          "id": "ExpandAllRegions,CollapseAllRegions",
+          "description": "Expand / collapse all"
+        },
+        {
+          "id": "CloseContent",
+          "description": "Close active editor tab"
+        },
+        {
+          "id": "EditorAddOrRemoveCaret",
+          "description": "Place the caret in multiple locations"
+        }
+      ]
+    },
+    {
+      "name": "Search and Replace",
+      "column": 1,
+      "actions": [
+        {
+          "id": "Find,Replace",
+          "description": "Find / Replace"
+        },
+        {
+          "id": "FindNext,FindPrevious",
+          "description": "Find next /  previous"
+        },
+        {
+          "id": "FindInPath,ReplaceInPath",
+          "description": "Find / Replace in path"
+        }
+      ]
+    },
+    {
+      "name": "Usage Search",
+      "column": 2,
+      "actions": [
+        {
+          "id": "FindUsages,FindUsagesInFile",
+          "description": "Find usages / Find usages in file"
+        },
+        {
+          "id": "HighlightUsagesInFile",
+          "description": "Highlight usages in file"
+        },
+        {
+          "id": "ShowUsages",
+          "description": "Show usages"
+        }
+      ]
+    },
+    {
+      "name": "Navigation",
+      "column": 2,
+      "actions": [
+        {
+          "id": "GotoClass,GotoFile,GotoSymbol",
+          "description": "Go to class / file / symbol"
+        },
+        {
+          "id": "NextTab,PreviousTab",
+          "description": "Go to next / previous editor tab "
+        },
+        {
+          "id": "JumpToLastWindow",
+          "description": "Go back to previous tool window"
+        },
+        {
+          "id": "EditorEscape",
+          "description": "Go to editor (from tool window)"
+        },
+        {
+          "id": "HideActiveWindow",
+          "description": "Hide active or last active window "
+        },
+        {
+          "id": "CloseActiveTab",
+          "description": "Close active tool windows tab"
+        },
+        {
+          "id": "GotoLine",
+          "description": "Go to line"
+        },
+        {
+          "id": "RecentFiles",
+          "description": "Recent files popup"
+        },
+        {
+          "id": "Back,Forward",
+          "description": "Navigate back / forward"
+        },
+        {
+          "id": "JumpToLastChange",
+          "description": "Navigate to last edit location"
+        },
+        {
+          "id": "SelectIn",
+          "description": "Select current file or symbol in any view"
+        },
+        {
+          "id": "GotoRelated",
+          "description": "Go to related header or source file"
+        },
+        {
+          "id": "GotoDeclaration",
+          "description": "Go to definition"
+        },
+        {
+          "id": "GotoImplementation",
+          "description": "Go to implementation(s)"
+        },
+        {
+          "id": "QuickImplementations",
+          "description": "Open quick definition lookup"
+        },
+        {
+          "id": "GotoTypeDeclaration",
+          "description": "Go to type declaration"
+        },
+        {
+          "id": "GotoSuperMethod",
+          "description": "Go to super-method / super-class "
+        },
+        {
+          "id": "MethodUp,MethodDown",
+          "description": "Go to previous / next method"
+        },
+        {
+          "id": "EditorCodeBlockStart,EditorCodeBlockEnd",
+          "description": "Move to code block end / start"
+        },
+        {
+          "id": "FileStructurePopup",
+          "description": "File structure popup"
+        },
+        {
+          "id": "TypeHierarchy,CallHierarchy,MethodHierarchy",
+          "description": "Type / call / method hierarchy"
+        },
+        {
+          "id": "GotoNextError,GotoPreviousError",
+          "description": "Next / previous highlighted error "
+        },
+        {
+          "id": "EditSource",
+          "description": "Jump to source"
+        },
+        {
+          "id": "ToggleBookmark,ToggleBookmarkWithMnemonic",
+          "description": "Toggle bookmark / with mnemonic"
+        },
+        {
+          "id": "GoToNumberedBookmark",
+          "description": "Go to numbered bookmark"
+        },
+        {
+          "id": "ShowBookmarks",
+          "description": "Show bookmarks"
+        }
+      ]
+    },
+    {
+      "name": "Version Control",
+      "column": 2,
+      "actions": [
+        {
+          "id": "CheckinProject,Vcs.Push",
+          "description": "Commit / push project to VCS"
+        },
+        {
+          "id": "Vcs.UpdateProject",
+          "description": "Update project from VCS"
+        },
+        {
+          "id": "RecentChanges",
+          "description": "View recent changes"
+        },
+        {
+          "id": "Vcs.QuickListPopupAction",
+          "description": "VCS actions"
+        }
+      ]
+    },
+    {
+      "name": "Refactoring",
+      "column": 3,
+      "actions": [
+        {
+          "id": "Refactorings.QuickListPopupAction",
+          "description": "Refactor This"
+        },
+        {
+          "id": "CopyElement,Move",
+          "description": "Copy / Move"
+        },
+        {
+          "id": "SafeDelete",
+          "description": "Safe Delete"
+        },
+        {
+          "id": "RenameElement,ChangeSignature",
+          "description": "Rename / Change Signature"
+        },
+        {
+          "id": "Inline",
+          "description": "Inline"
+        },
+        {
+          "id": "ExtractMethod",
+          "description": "Extract Method"
+        },
+        {
+          "id": "IntroduceVariable,IntroduceConstant",
+          "description": "Extract Variable / Constant"
+        },
+        {
+          "id": "IntroduceParameter",
+          "description": "Extract Parameter"
+        },
+        {
+          "id": "CIDR.Lang.ObjC.IntroduceProperty",
+          "description": "Extract Property"
+        },
+        {
+          "id": "IntroduceField",
+          "description": "Extract Instance Variable"
+        }
+      ]
+    },
+    {
+      "name": "Compile and Run",
+      "column": 3,
+      "actions": [
+        {
+          "id": "Build",
+          "description": "Build Project"
+        },
+        {
+          "id": "Run,Debug",
+          "description": "Run / Debug"
+        },
+        {
+          "id": "ChooseRunConfiguration,ChooseDebugConfiguration",
+          "description": "Select configuration and run / debug"
+        },
+        {
+          "id": "RunClass,DebugClass",
+          "description": "Run / Debug context configuration"
+        },
+        {
+          "id": "RunAnything",
+          "description": "Run Anything"
+        }
+      ]
+    },
+    {
+      "name": "Debugging",
+      "column": 3,
+      "actions": [
+        {
+          "id": "StepInto,StepOver,StepOut",
+          "description": "Step into / over / out"
+        },
+        {
+          "id": "RunToCursor",
+          "description": "Run to cursor"
+        },
+        {
+          "id": "EvaluateExpression",
+          "description": "Evaluate expression"
+        },
+        {
+          "id": "Resume",
+          "description": "Resume program"
+        },
+        {
+          "id": "ToggleLineBreakpoint",
+          "description": "Toggle breakpoint"
+        },
+        {
+          "id": "ViewBreakpoints",
+          "description": "View breakpoints"
+        }
+      ]
+    },
+    {
+      "name": "Live Templates",
+      "column": 3,
+      "actions": [
+        {
+          "id": "SurroundWithLiveTemplate",
+          "description": "Surround with Live Template"
+        },
+        {
+          "id": "InsertLiveTemplate",
+          "description": "Insert Live Template"
+        }
+      ]
+    },
+    {
+      "name": "General",
+      "column": 3,
+      "actions": [
+        {
+          "id": "SearchEverywhere",
+          "description": ""
+        },
+        {
+          "id": "Toolwindows",
+          "description": ""
+        },
+        {
+          "id": "HideAllWindows",
+          "description": ""
+        },
+        {
+          "id": "AddToFavoritesPopup",
+          "description": "Add to Favorites"
+        },
+        {
+          "id": "CodeInspection.OnEditor",
+          "description": "Inspect current file with current profile"
+        },
+        {
+          "id": "QuickChangeScheme",
+          "description": "Quick switch current scheme"
+        },
+        {
+          "id": "Switcher",
+          "description": "Switch between tabs and tool windows"
+        }
+      ]
+    }
+  ]
+}

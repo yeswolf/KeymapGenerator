@@ -12,6 +12,10 @@ import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 import org.jetbrains.annotations.NotNull;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 @SuppressWarnings("ALL")
@@ -63,8 +67,11 @@ public class Exporter implements ApplicationComponent {
                 actionsJSON.put(actionJSON);
             }
             root.put("actions", actionsJSON);
-            System.out.println(root);
+            Files.write( Paths.get(System.getProperty("user.home")
+,"all_keymaps.json"), root.toString().getBytes(), StandardOpenOption.CREATE);
         } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
