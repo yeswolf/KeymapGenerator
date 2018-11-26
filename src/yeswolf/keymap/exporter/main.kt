@@ -166,7 +166,7 @@ private fun convert(keymaps: JSONObject, toPrint: JSONObject, name: String, logo
             }
           }
 
-          scat += (shortcut + if (k != actions.size - 1) " / " else "")
+          scat += (shortcut + if (k != actions.size - 1) "</tspan><tspan class=\"light font_size slash\" y=\"0\"> / </tspan><tspan y=\"0\" class=\"medium_plus font_size\">" else "")
         }
         scat += ("</tspan></text>")
         val descr = "<text transform=\"matrix(1 0 0 1 $x $y)\">" +
@@ -217,7 +217,7 @@ fun main(args: Array<String>) {
     val file = File(outputFile)
     val result = convert(actions, toPrint, keymapName, logoPath, mac)
     file.writeText(result)
-    Runtime.getRuntime().exec("open ${file.absolutePath}")
+//    Runtime.getRuntime().exec("open ${file.absolutePath}")
   } catch (e: FileNotFoundException) {
     e.printStackTrace()
   } catch (e: IOException) {

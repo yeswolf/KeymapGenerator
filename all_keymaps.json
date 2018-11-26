@@ -28666,7 +28666,7 @@
         },
         {
           "keymap": "Default",
-          "shortcuts": []
+          "shortcuts": ["[pressed TAB]"]
         },
         {
           "keymap": "IntelliJ IDEA Classic (OS X)",
