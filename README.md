@@ -20,9 +20,7 @@ It's keymap generator for IntelliJ IDEs. Creates beautiful SVG that can be conve
     * ```KeymapName``` is the keymap name (for example, "Default")
     * ```result_keymap.svg``` is an output path of our SVG with keymap
     * ```mac``` is a boolean flag for using ⌘, ⌥ and other macOS characters. If empty, generates keymap for Win/Linux. 
-6. Open SVG in your browser to check, open with Adobe Illustrator and save to PDF to have a ready-to-print keymap. 
-
-Note: You can't just print the SVG - none of macOS characters will be displayed. 
+6. Open SVG in Chrome check, open with Adobe Illustrator or Adobe XD, insert logo, and save to PDF to have a ready-to-print keymap. Note: logo needs to be inserted manually, I can't figure out how to embed it easily, so current implementation is just to check everything is good. Also, you can't just print the SVG - none of macOS characters will be displayed. 
 
 # Patch.json
 
