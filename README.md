@@ -1,8 +1,8 @@
-#What is it?
+# What is it?
 
 It's keymap generator for IntelliJ IDEs. Creates beautiful SVG that can be converted to PDF using Adobe Illustrator.
 
-#How to use?
+# How to use?
 
 1. Install Gotham fonts (Medium, Light, Regular). Otherwise default system font will be used. 
 2. Install [KeymapExporter](KeymapExporter.zip) plugin in the IDE you want to generate keymaps for, restart IDE.
@@ -18,7 +18,7 @@ It's keymap generator for IntelliJ IDEs. Creates beautiful SVG that can be conve
 
 Note: You can't just print the SVG - none of macOS characters will be displayed. 
 
-#Patch.json
+# Patch.json
 
 1. Contains array of sections (shortcut blocks, like **Editing**). Each section has:
     * name
@@ -30,6 +30,6 @@ Note: You can't just print the SVG - none of macOS characters will be displayed.
     
 Yes, you need to create it **once** since we can't generate a keymap directly using our IDE actions. 
 
-#Other notes
+# Other notes
 
 Some frequently used actions are not included into ```all_keymaps.json```. Take a look at replacements and add them by hand (or take a look at [patch.json for AppCode](patch.json) and reuse some parts). If action is missed, "Can't find <actionid>" will be generated instead of the shortcut. If some key names (like HOME or MULTIPLY) appear in the keymap - create an issue or pull request.
