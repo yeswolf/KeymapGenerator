@@ -294,43 +294,37 @@
         {
           "keymap": "Xcode",
           "shortcuts": [
-            "[meta pressed F9]"
+            "[meta pressed B]"
           ]
         },
         {
           "keymap": "Visual Studio",
           "shortcuts": [
-            "[meta pressed F9]"
           ]
         },
         {
           "keymap": "ReSharper",
           "shortcuts": [
-            "[meta pressed F9]"
           ]
         },
         {
           "keymap": "ReSharper OSX",
           "shortcuts": [
-            "[meta pressed F9]"
           ]
         },
         {
           "keymap": "Eclipse",
           "shortcuts": [
-            "[meta pressed F9]"
           ]
         },
         {
           "keymap": "Eclipse (Mac OS X)",
           "shortcuts": [
-            "[meta pressed F9]"
           ]
         },
         {
           "keymap": "Emacs",
           "shortcuts": [
-            "[meta pressed F9]"
           ]
         }
       ]

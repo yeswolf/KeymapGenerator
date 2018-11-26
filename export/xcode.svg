@@ -159,8 +159,8 @@
 <text transform="matrix(1 0 0 1 464 472)"><tspan x="0" y="0" class="medium_plus font_size">⌘F3</tspan></text><line class="row_line" x1="308" y1="476" x2="532" y2="476"/>
 <text transform="matrix(1 0 0 1 308 496)"><tspan x="0" y="0" class="medium font_size">VERSION CONTROL</tspan></text>
 <line class="headerline" x1="308" y1="500" x2="532" y2="500"/>
-<text transform="matrix(1 0 0 1 308 508)"><tspan x="0" y="0" class="light font_size">Commit / push project to VCS</tspan></text>
-<text transform="matrix(1 0 0 1 464 508)"><tspan x="0" y="0" class="medium_plus font_size">⌘⌥C</tspan><tspan class="light font_size slash" y="0"> / </tspan><tspan y="0" class="medium_plus font_size"></tspan></text><line class="row_line" x1="308" y1="512" x2="532" y2="512"/>
+<text transform="matrix(1 0 0 1 308 508)"><tspan x="0" y="0" class="light font_size">Commit project</tspan></text>
+<text transform="matrix(1 0 0 1 464 508)"><tspan x="0" y="0" class="medium_plus font_size">⌘⌥C</tspan></text><line class="row_line" x1="308" y1="512" x2="532" y2="512"/>
 <text transform="matrix(1 0 0 1 308 520)"><tspan x="0" y="0" class="light font_size">Update project from VCS</tspan></text>
 <text transform="matrix(1 0 0 1 464 520)"><tspan x="0" y="0" class="medium_plus font_size">⌘⌥X</tspan></text><line class="row_line" x1="308" y1="524" x2="532" y2="524"/>
 <text transform="matrix(1 0 0 1 308 532)"><tspan x="0" y="0" class="light font_size">View recent changes</tspan></text>
@@ -192,7 +192,7 @@
 <text transform="matrix(1 0 0 1 588 184)"><tspan x="0" y="0" class="medium font_size">COMPILE AND RUN</tspan></text>
 <line class="headerline" x1="588" y1="188" x2="812" y2="188"/>
 <text transform="matrix(1 0 0 1 588 196)"><tspan x="0" y="0" class="light font_size">Build Project</tspan></text>
-<text transform="matrix(1 0 0 1 744 196)"><tspan x="0" y="0" class="medium_plus font_size">⌘F9</tspan></text><line class="row_line" x1="588" y1="200" x2="812" y2="200"/>
+<text transform="matrix(1 0 0 1 744 196)"><tspan x="0" y="0" class="medium_plus font_size">⌘B</tspan></text><line class="row_line" x1="588" y1="200" x2="812" y2="200"/>
 <text transform="matrix(1 0 0 1 588 208)"><tspan x="0" y="0" class="light font_size">Run / Debug</tspan></text>
 <text transform="matrix(1 0 0 1 744 208)"><tspan x="0" y="0" class="medium_plus font_size">⇧⌘⌥R</tspan><tspan class="light font_size slash" y="0"> / </tspan><tspan y="0" class="medium_plus font_size">⌘R</tspan></text><line class="row_line" x1="588" y1="212" x2="812" y2="212"/>
 <text transform="matrix(1 0 0 1 588 220)"><tspan x="0" y="0" class="light font_size">Select configuration and run / debug</tspan></text>
