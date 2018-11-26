@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="All" type="CompoundRunConfigurationType">
+    <toRun name="Xcode" type="JetRunConfigurationType" />
+    <toRun name="Default" type="JetRunConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>

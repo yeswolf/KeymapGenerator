@@ -81,8 +81,20 @@
           "description": "Optimize imports"
         },
         {
-          "id": "EditorIndentSelection,EditorUnindentSelection",
+          "id": "EditorIndentLineOrSelection,EditorUnindentSelection",
           "description": "Indent / unindent selected lines"
+        },
+        {
+          "id": "$Cut",
+          "description": "Cut current line to clipboard"
+        },
+        {
+          "id": "$Copy",
+          "description": "Copy current line to clipboard"
+        },
+        {
+          "id": "$Paste",
+          "description": "Paste from clipboard"
         },
         {
           "id": "PasteMultiple",
@@ -141,7 +153,7 @@
     },
     {
       "name": "Search and Replace",
-      "column": 1,
+      "column": 2,
       "actions": [
         {
           "id": "Find,Replace",

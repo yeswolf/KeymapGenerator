@@ -118,7 +118,7 @@ private fun convert(keymaps: JSONObject, toPrint: JSONObject, name: String, logo
                   .replace("BACK_SLASH".toRegex(), "&#x5c;")
                   .replace("pressed ".toRegex(), "")
                   .replace("SPACE".toRegex(), "Space")
-                  .replace("ENTER".toRegex(), "⏎")
+                  .replace("ENTER".toRegex(), "↩")
                   .replace("SLASH".toRegex(), "/")
                   .replace("OPEN_BRACKET".toRegex(), "[")
                   .replace("CLOSE_BRACKET".toRegex(), "]")
@@ -178,7 +178,7 @@ private fun convert(keymaps: JSONObject, toPrint: JSONObject, name: String, logo
         y += textLineGap
         result += "<line class=\"row_line\" x1=\"$x\" y1=\"$y\" x2=\"$x2\" y2=\"$y\"/>\n"
       }
-      headery = y + (lineHeight + textLineGap)*2
+      headery = y + (lineHeight*2 + textLineGap)
     }
   } catch (e: JSONException) {
     e.printStackTrace()

@@ -1,6 +1,12 @@
 # What is it?
 
-It's keymap generator for IntelliJ IDEs. Creates beautiful SVG that can be converted to PDF using Adobe Illustrator.
+It's keymap generator for IntelliJ IDEs. Creates beautiful SVG that can be converted to PDF using Adobe Illustrator (or Adobe XD, for free). Use Chrome for viewing SVGs.
+
+# Examples
+
+1. [Default keymap for AppCode](export/default.svg)
+2. [Xcode keymap for AppCode](export/default.svg)
+3. [PDF](export/keymaps.pdf) with keymaps.
 
 # How to use?
 
