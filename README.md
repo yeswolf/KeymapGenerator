@@ -4,8 +4,8 @@ It's keymap generator for IntelliJ IDEs. Creates beautiful SVG that can be conve
 
 # Examples
 
-1. [Default keymap for AppCode](export/default.svg)
-2. [Xcode keymap for AppCode](export/default.svg)
+1. Default keymap for AppCode: [SVG](export/default.svg), [PDF](export/AppCode_default_keymap.pdf)
+2. Xcode keymap for AppCode: [SVG](export/xcode.svg), [PDF](export/AppCode_xcode_keymap.pdf)
 3. [PDF](export/keymaps.pdf) with keymaps.
 
 # How to use?
@@ -21,6 +21,7 @@ It's keymap generator for IntelliJ IDEs. Creates beautiful SVG that can be conve
     * ```result_keymap.svg``` is an output path of our SVG with keymap
     * ```mac``` is a boolean flag for using ⌘, ⌥ and other macOS characters. If empty, generates keymap for Win/Linux. 
 6. Open SVG in Chrome check, open with Adobe Illustrator or Adobe XD, insert logo, and save to PDF to have a ready-to-print keymap. Note: logo needs to be inserted manually, I can't figure out how to embed it easily, so current implementation is just to check everything is good. Also, you can't just print the SVG - none of macOS characters will be displayed. 
+7. If PDF optimization is needed, install ```gs``` via brew and run ```export/optimize.sh```. 
 
 # Patch.json
 

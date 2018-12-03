@@ -444,6 +444,10 @@
           "description": ""
         },
         {
+          "id": "GotoAction",
+          "description": "Find any IDE action"
+        },
+        {
           "id": "Toolwindows",
           "description": ""
         },

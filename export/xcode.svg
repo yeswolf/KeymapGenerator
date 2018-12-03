@@ -225,16 +225,18 @@
 <line class="headerline" x1="588" y1="416" x2="812" y2="416"/>
 <text transform="matrix(1 0 0 1 588 424)"><tspan x="0" y="0" class="light font_size">Search Everywhere</tspan></text>
 <text transform="matrix(1 0 0 1 744 424)"><tspan x="0" y="0" class="medium_plus font_size">Double⇧</tspan></text><line class="row_line" x1="588" y1="428" x2="812" y2="428"/>
-<text transform="matrix(1 0 0 1 588 436)"><tspan x="0" y="0" class="light font_size">Open corresponding tool window</tspan></text>
-<text transform="matrix(1 0 0 1 744 436)"><tspan x="0" y="0" class="medium_plus font_size">⌘0...⌘9</tspan></text><line class="row_line" x1="588" y1="440" x2="812" y2="440"/>
-<text transform="matrix(1 0 0 1 588 448)"><tspan x="0" y="0" class="light font_size">Hide all tool windows</tspan></text>
-<text transform="matrix(1 0 0 1 744 448)"><tspan x="0" y="0" class="medium_plus font_size">⇧⌘F12</tspan></text><line class="row_line" x1="588" y1="452" x2="812" y2="452"/>
-<text transform="matrix(1 0 0 1 588 460)"><tspan x="0" y="0" class="light font_size">Add to Favorites</tspan></text>
-<text transform="matrix(1 0 0 1 744 460)"><tspan x="0" y="0" class="medium_plus font_size">⇧⌥F</tspan></text><line class="row_line" x1="588" y1="464" x2="812" y2="464"/>
-<text transform="matrix(1 0 0 1 588 472)"><tspan x="0" y="0" class="light font_size">Inspect current file with current profile</tspan></text>
-<text transform="matrix(1 0 0 1 744 472)"><tspan x="0" y="0" class="medium_plus font_size">⇧⌥I</tspan></text><line class="row_line" x1="588" y1="476" x2="812" y2="476"/>
-<text transform="matrix(1 0 0 1 588 484)"><tspan x="0" y="0" class="light font_size">Quick switch current scheme</tspan></text>
-<text transform="matrix(1 0 0 1 744 484)"><tspan x="0" y="0" class="medium_plus font_size">⌃`</tspan></text><line class="row_line" x1="588" y1="488" x2="812" y2="488"/>
-<text transform="matrix(1 0 0 1 588 496)"><tspan x="0" y="0" class="light font_size">Switch between tabs and tool windows</tspan></text>
-<text transform="matrix(1 0 0 1 744 496)"><tspan x="0" y="0" class="medium_plus font_size">⌃⇥</tspan></text><line class="row_line" x1="588" y1="500" x2="812" y2="500"/>
+<text transform="matrix(1 0 0 1 588 436)"><tspan x="0" y="0" class="light font_size">Find any IDE action</tspan></text>
+<text transform="matrix(1 0 0 1 744 436)"><tspan x="0" y="0" class="medium_plus font_size">⇧⌘A</tspan></text><line class="row_line" x1="588" y1="440" x2="812" y2="440"/>
+<text transform="matrix(1 0 0 1 588 448)"><tspan x="0" y="0" class="light font_size">Open corresponding tool window</tspan></text>
+<text transform="matrix(1 0 0 1 744 448)"><tspan x="0" y="0" class="medium_plus font_size">⌘0...⌘9</tspan></text><line class="row_line" x1="588" y1="452" x2="812" y2="452"/>
+<text transform="matrix(1 0 0 1 588 460)"><tspan x="0" y="0" class="light font_size">Hide all tool windows</tspan></text>
+<text transform="matrix(1 0 0 1 744 460)"><tspan x="0" y="0" class="medium_plus font_size">⇧⌘F12</tspan></text><line class="row_line" x1="588" y1="464" x2="812" y2="464"/>
+<text transform="matrix(1 0 0 1 588 472)"><tspan x="0" y="0" class="light font_size">Add to Favorites</tspan></text>
+<text transform="matrix(1 0 0 1 744 472)"><tspan x="0" y="0" class="medium_plus font_size">⇧⌥F</tspan></text><line class="row_line" x1="588" y1="476" x2="812" y2="476"/>
+<text transform="matrix(1 0 0 1 588 484)"><tspan x="0" y="0" class="light font_size">Inspect current file with current profile</tspan></text>
+<text transform="matrix(1 0 0 1 744 484)"><tspan x="0" y="0" class="medium_plus font_size">⇧⌥I</tspan></text><line class="row_line" x1="588" y1="488" x2="812" y2="488"/>
+<text transform="matrix(1 0 0 1 588 496)"><tspan x="0" y="0" class="light font_size">Quick switch current scheme</tspan></text>
+<text transform="matrix(1 0 0 1 744 496)"><tspan x="0" y="0" class="medium_plus font_size">⌃`</tspan></text><line class="row_line" x1="588" y1="500" x2="812" y2="500"/>
+<text transform="matrix(1 0 0 1 588 508)"><tspan x="0" y="0" class="light font_size">Switch between tabs and tool windows</tspan></text>
+<text transform="matrix(1 0 0 1 744 508)"><tspan x="0" y="0" class="medium_plus font_size">⌃⇥</tspan></text><line class="row_line" x1="588" y1="512" x2="812" y2="512"/>
 </svg>
