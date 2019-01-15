@@ -12009,8 +12009,8 @@
         {
           "keymap": "Xcode",
           "shortcuts": [
-            "[ctrl pressed SPACE]",
-            "[alt pressed ESCAPE]"
+            "[alt pressed ESCAPE]",
+            "[ctrl pressed SPACE]"
           ]
         },
         {

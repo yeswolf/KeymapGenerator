@@ -16,7 +16,7 @@
     <image x="28" y="36" height="22" xlink:href="logo_AppCode.svg" /><text transform="matrix(1 0 0 1 28 76)"><tspan x="0" y="0" class="medium font_size">EDITING</tspan></text>
 <line class="headerline" x1="28" y1="80" x2="252" y2="80"/>
 <text transform="matrix(1 0 0 1 28 88)"><tspan x="0" y="0" class="light font_size">Basic code completion</tspan></text>
-<text transform="matrix(1 0 0 1 184 88)"><tspan x="0" y="0" class="medium_plus font_size">⌃Space</tspan></text><line class="row_line" x1="28" y1="92" x2="252" y2="92"/>
+<text transform="matrix(1 0 0 1 184 88)"><tspan x="0" y="0" class="medium_plus font_size">⌥⎋</tspan></text><line class="row_line" x1="28" y1="92" x2="252" y2="92"/>
 <text transform="matrix(1 0 0 1 28 100)"><tspan x="0" y="0" class="light font_size">Smart code completion</tspan></text>
 <text transform="matrix(1 0 0 1 184 100)"><tspan x="0" y="0" class="medium_plus font_size">⇧⌃Space</tspan></text><line class="row_line" x1="28" y1="104" x2="252" y2="104"/>
 <text transform="matrix(1 0 0 1 28 112)"><tspan x="0" y="0" class="light font_size">Complete statement</tspan></text>
@@ -87,6 +87,12 @@
 <text transform="matrix(1 0 0 1 184 496)"><tspan x="0" y="0" class="medium_plus font_size">⌘W</tspan></text><line class="row_line" x1="28" y1="500" x2="252" y2="500"/>
 <text transform="matrix(1 0 0 1 28 508)"><tspan x="0" y="0" class="light font_size">Place the caret in multiple locations</tspan></text>
 <text transform="matrix(1 0 0 1 184 508)"><tspan x="0" y="0" class="medium_plus font_size">⌥⇧Click</tspan></text><line class="row_line" x1="28" y1="512" x2="252" y2="512"/>
+<text transform="matrix(1 0 0 1 28 520)"><tspan x="0" y="0" class="light font_size">Toggle column selection mode</tspan></text>
+<text transform="matrix(1 0 0 1 184 520)"><tspan x="0" y="0" class="medium_plus font_size">⇧⌘8</tspan></text><line class="row_line" x1="28" y1="524" x2="252" y2="524"/>
+<text transform="matrix(1 0 0 1 28 532)"><tspan x="0" y="0" class="light font_size">Select next / unselect previous occurrence</tspan></text>
+<text transform="matrix(1 0 0 1 184 532)"><tspan x="0" y="0" class="medium_plus font_size">⌃G</tspan><tspan class="light font_size slash" y="0"> / </tspan><tspan y="0" class="medium_plus font_size">⇧⌃G</tspan></text><line class="row_line" x1="28" y1="536" x2="252" y2="536"/>
+<text transform="matrix(1 0 0 1 28 544)"><tspan x="0" y="0" class="light font_size">Select all occurrences</tspan></text>
+<text transform="matrix(1 0 0 1 184 544)"><tspan x="0" y="0" class="medium_plus font_size">⌃⌘G</tspan></text><line class="row_line" x1="28" y1="548" x2="252" y2="548"/>
 <text transform="matrix(1 0 0 1 308 40)"><tspan x="0" y="0" class="medium font_size">SEARCH AND REPLACE</tspan></text>
 <line class="headerline" x1="308" y1="44" x2="532" y2="44"/>
 <text transform="matrix(1 0 0 1 308 52)"><tspan x="0" y="0" class="light font_size">Find / Replace</tspan></text>

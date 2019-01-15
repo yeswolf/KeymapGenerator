@@ -148,6 +148,18 @@
         {
           "id": "EditorAddOrRemoveCaret",
           "description": "Place the caret in multiple locations"
+        },
+        {
+          "id": "EditorToggleColumnMode",
+          "description": "Toggle column selection mode"
+        },
+        {
+          "id" : "SelectNextOccurrence,UnselectPreviousOccurrence",
+          "description": "Select next / unselect previous occurrence"
+        },
+        {
+          "id" : "SelectAllOccurrences",
+          "description": "Select all occurrences"
         }
       ]
     },
